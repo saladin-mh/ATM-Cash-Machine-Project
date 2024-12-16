@@ -38,7 +38,7 @@ while True:
 
                 if choice == '1':
                     # Check balance
-                    print(f"Your balance is: ${account['balance']}")
+                    print("Your balance is: " + str(account['balance']))
                 elif choice == '2':
                     # Deposit money
                     print("Options:")
@@ -53,7 +53,7 @@ while True:
                     if 1 <= dipo <= 6:
                         amount = amount_options[dipo - 1]
                         account["balance"] += amount
-                        account["transaction_history"].append(f"Deposited: £{amount}")
+                        account["transaction_history"].append("Deposited: £" + str(amount))
                         print("Deposit successful.")
                     else:
                         print("Incorrect option.")
@@ -72,7 +72,7 @@ while True:
                         amount = amount_options[draw - 1]
                         if amount <= account["balance"]:
                             account["balance"] -= amount
-                            account["transaction_history"].append(f"Withdrew: £{amount}")
+                            account["transaction_history"].append("Withdrew: £" + str(amount))
                             print("Withdrawal successful.")
                         else:
                             print("Insufficient funds.")
