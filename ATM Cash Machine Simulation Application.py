@@ -96,4 +96,3 @@ while True:
                     print("Invalid option. Please try again.")
     else:
         print("Incorrect user details.")
-        print("Incorrect user details.")
